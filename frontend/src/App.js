@@ -16,7 +16,7 @@ const App = () => {
       setText('');
       setLoading(true);
       try {
-        const response = await fetch(`http://localhost:8000/prompt/${text}`);
+        const response = await fetch(`https://genie-fg2dz.vercel.app/prompt/${text}`);
         const data = await response.json();
         // Update the last message with the bot's response
         setMessages(prevMessages => {
