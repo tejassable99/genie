@@ -5,7 +5,7 @@ const cors = require('cors')
 require('dotenv').config()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({origin:"https://genie-xmr7.vercel.app"}))
 
 const LANGUAGE_MODEL_API_KEY = process.env.LANGUAGE_MODEL_API_KEY
 const LANGUAGE_MODEL_URL = `https://generativelanguage.googleapis.com/v1beta1/models/chat-bison-001:generateMessage?key=${LANGUAGE_MODEL_API_KEY}`
